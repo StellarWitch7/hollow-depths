@@ -1,0 +1,75 @@
+{
+	"schemaVersion": 1,
+	"id": "hollow-depths",
+	"version": "${version}",
+	"name": "Hollow Depths",
+	"description": "It calls your name",
+	"authors": [
+		"StellarWitch7"
+	],
+	"contact": {
+		"homepage": "https://github.com/StellarWitch7/hollow-depths",
+		"sources": "https://github.com/StellarWitch7/hollow-depths"
+	},
+	"license": "MIT",
+	"icon": "assets/hollow-depths/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "stellarwitch7.hollow_depths.HollowDepths",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "stellarwitch7.hollow_depths.HollowDepthsClient",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "stellarwitch7.hollow_depths.HollowDepthsDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"entrypoints": {
+		"cardinal-components-entity": [
+			{
+				"value": "stellarwitch7.hollow_depths.cca.entity.ModEntityComponents",
+				"adapter": "kotlin"
+			}
+		],
+		"cardinal-components-block": [
+			{
+				"value": "stellarwitch7.hollow_depths.cca.block.ModBlockComponents",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"custom": {
+		"cardinal-components": [
+			"hollow-depths:cataclysm",
+			"hollow-depths:shade"
+		]
+	},
+	"mixins": [
+		"hollow-depths.mixins.json",
+		{
+			"config": "hollow-depths.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*",
+		"libstellar": ">=1.1.7"
+	},
+	"suggests": {
+		"trickster": ">=2.0.0-alpha.34"
+	}
+}

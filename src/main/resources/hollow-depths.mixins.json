@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "stellarwitch7.hollow_depths.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "SculkCatalystBlockEntityListenerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
