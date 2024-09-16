@@ -29,7 +29,7 @@ class CataclysmComponent(val blockEntity: SculkCatalystBlockEntity) : ServerTick
             if (locked) {
                 charge()
             } else {
-//                blockEntity.eventListener.spreadManager.spread(blockEntity.pos, 10)
+                blockEntity.eventListener.spreadManager.spread(blockEntity.pos, 100) //TODO: this is basically free exp
             }
 
             ticksSinceLastSpread = 0
@@ -37,6 +37,10 @@ class CataclysmComponent(val blockEntity: SculkCatalystBlockEntity) : ServerTick
         }
 
         ticksSinceLastSpread++
+    }
+
+    fun lock() {
+        locked = true
     }
 
     fun charge() {

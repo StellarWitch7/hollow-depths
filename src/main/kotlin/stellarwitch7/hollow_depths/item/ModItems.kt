@@ -5,4 +5,6 @@ import stellarwitch7.libstellar.registry.item.ItemRegistrar
 
 object ModItems : ItemRegistrar {
     override val modID: String = HollowDepths.MOD_ID
+
+    val sculkContainmentUnit: SculkContainmentUnitItem = register("sculk_contaiment_unit", SculkContainmentUnitItem())
 }
